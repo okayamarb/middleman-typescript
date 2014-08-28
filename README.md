@@ -1,6 +1,6 @@
 # Middleman::Typescript
 
-TODO: Write a gem description
+middleman-typescript is an extension for the Middleman.
 
 ## Installation
 
@@ -16,10 +16,12 @@ Or install it yourself as:
 
     $ gem install middleman-typescript
 
-## Usage
+## Configuration
 
-TODO: Write usage instructions here
+    ignore "source/typescripts/*" # *.ts ignore LiveReload
+    activate :typescript, typescript_dir: 'ts' # default: 'typescripts'
 
+Create typescripts directory under source directory. 
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/middleman-typescript/fork )
