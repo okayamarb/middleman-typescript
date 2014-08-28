@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["chariderpato@gmail.com"]
   spec.summary       = %q{TypeScript support for middleman}
   spec.description   = %q{TypeScript support for middleman}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/okayamarb/middleman-typescript"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
