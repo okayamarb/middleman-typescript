@@ -1,4 +1,5 @@
 require 'typescript-node'
+require 'pry'
 
 module Middleman
   class TypescriptExtension < Extension
@@ -6,7 +7,6 @@ module Middleman
     def initialize(app, options_hash={}, &block)
       super
       app.set :typescript_dir, options.typescript_dir
-
       return unless app.environment == :development
 
       app.ready do
@@ -24,6 +24,8 @@ module Middleman
             File.open export_path, "w" do |f|
               f.write result.js
             end
+          else
+            logger.info "TypeScript: #{result.stderr}"
           end
         end
 
