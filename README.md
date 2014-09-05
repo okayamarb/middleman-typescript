@@ -18,8 +18,20 @@ Or install it yourself as:
 
 ## Configuration
 
-    ignore "source/typescripts/*" # *.ts ignore LiveReload
-    activate :typescript, typescript_dir: 'ts' # default: 'typescripts'
+    activate :typescript,
+             typescript_dir: 'ts',  # default: 'typescripts'
+             js_lib_dir: 'vendor',  # default: 'lib'
+             target: 'ES3',         # default: 'ES5'
+             no_implicit_any: false # default: true
+    configure :development do
+      ignore '.idea/*'              # for Intellij idea user
+      ignore 'source/typescripts/*' # *.ts ignore LiveReload
+      activate :livereload
+    end
+    
+    configure :build do
+      ignore 'typescripts/*'        # ignore copy *.ts to build dir
+    end
 
 Create typescripts directory under source directory. 
 ## Contributing
