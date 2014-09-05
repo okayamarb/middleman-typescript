@@ -1,5 +1,4 @@
 require 'typescript-node'
-require 'pry'
 
 module Middleman
   class TypescriptExtension < Extension
