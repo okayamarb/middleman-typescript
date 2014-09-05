@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    middleman-typescript (0.0.2)
+    middleman-typescript (0.0.3)
       middleman-core (~> 3.2)
       typescript-node (~> 1.1)
 
